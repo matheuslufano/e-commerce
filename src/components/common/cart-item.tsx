@@ -1,7 +1,7 @@
+import { MinusIcon, PlusIcon, TrashIcon } from "lucide-react";
 import Image from "next/image";
 import { toast } from "sonner";
 
-import { productTable, productVariantTable } from "@/db/schema";
 import { formatCentsToBRL } from "@/helpers/money";
 import { useDecreaseCartProduct } from "@/hooks/mutations/use-decrease-cart-product";
 import { useIncreaseCartProduct } from "@/hooks/mutations/use-increase-cart-product";
@@ -98,8 +98,8 @@ const CartItem = ({
           {formatCentsToBRL(productVariantPriceInCents)}
         </p>
       </div>
-    </Link>
+    </div>
   );
 };
 
-export default ProductItem;
+export default CartItem;
